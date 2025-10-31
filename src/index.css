@@ -1,0 +1,118 @@
+/* ✅ Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700;900&display=swap');
+
+/* ✅ Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+*::-webkit-scrollbar { display: none; }
+body { font-family: 'Open Sans', 'Roboto', Arial, sans-serif; }
+button { cursor: pointer; }
+a { text-decoration: none; }
+#root { display: flex; flex-direction: column; min-height: 100vh; }
+
+/* ✅ Theme Variables */
+:root {
+  --bg: #ffffff;
+  --text: #111827;
+  --text-muted: #6b7280;
+  --muted: #f8f9fa;
+  --border: #d1d5db;
+  --menu-bg: #ffffff;
+  --menu-hover: #f3f4f6;
+  --shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+body.dark-mode {
+  --bg: #1f2023;
+  --text: #e5e7eb;
+  --text-muted: #a1a1aa;
+  --muted: #2b2c2f;
+  --border: #3d3e42;
+  --menu-bg: #2b2c2f;
+  --menu-hover: #3a3b3f;
+  --shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* ✅ Page Background */
+body { background: var(--bg); color: var(--text); }
+
+/* ✅ Header - Clean */
+.header-bar {
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  box-shadow: none;
+}
+
+/* ✅ Remove box around search wrapper */
+.search-desktop > div,
+.search-mobile > div {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* ✅ Ellipsis Icon - Clean */
+.optionsContainer svg {
+  background: transparent !important;
+  padding: 6px !important;
+  border-radius: 50%;
+  transition: background 0.15s ease;
+}
+.optionsContainer svg:hover { background: rgba(0, 0, 0, 0.06); }
+body.dark-mode .optionsContainer svg:hover { background: rgba(255, 255, 255, 0.12); }
+
+/* ✅ Dropdown Main Box (Google Drive Style) */
+.OptionsMenu,
+.MuiPaper-root,
+.MuiMenu-paper {
+  background: var(--menu-bg) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  box-shadow: var(--shadow) !important;
+  padding: 6px 0 !important;
+  overflow: hidden !important;
+}
+
+/* ✅ Dropdown Items (Vertical Clean List) */
+.MuiMenuItem-root,
+.OptionsMenu span {
+  background: transparent !important;
+  color: var(--text) !important;
+  padding: 10px 14px !important;
+  border: none !important;
+  border-radius: 4px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  width: 100% !important;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.MuiMenuItem-root:hover,
+.OptionsMenu span:hover {
+  background: var(--menu-hover) !important;
+}
+
+/* ✅ Delete Item Red */
+.OptionsMenu span.delete,
+.MuiMenuItem-root.delete-item {
+  color: #e63946 !important;
+}
+body.dark-mode .OptionsMenu span.delete,
+body.dark-mode .MuiMenuItem-root.delete-item {
+  color: #ff6b6b !important;
+}
+
+/* ✅ Meta Info in Dropdown */
+.OptionsMenu .meta {
+  padding: 6px 12px !important;
+  font-size: 12px !important;
+  color: var(--text-muted) !important;
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
