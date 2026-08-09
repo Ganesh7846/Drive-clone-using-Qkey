@@ -1,6 +1,6 @@
 # Cloud Storage Application
 
-<img src="public/loginPage.png" alt="drawing" width="500"/>              <img src="public/home.png" alt="drawing" width="500"/>
+<img src="public/loginPage.png" alt="drawing" width="500"/>              <img src="public/HomePage.png" alt="drawing" width="500"/>
 
 A full-stack cloud storage application built using React, Firebase, and styled-components.
 
